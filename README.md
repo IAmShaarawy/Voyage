@@ -12,8 +12,11 @@
    
 
 ### Colors:
-![lol](http://placehold.it/150x40/2D3655/FFFFFF?text=2D3655)
- <p1>■</p1> #2D3655 <p2>■</p2> #424A66 <s1>■</s1> #6E6B64 <s2>■</s2> #A49D94 <accent>■</accent> #F1DFCF
+![#2D3655](http://placehold.it/150x40/2D3655/FFFFFF?text=2D3655)
+![#424A66](http://placehold.it/150x40/424A66/FFFFFF?text=424A66)
+![#6E6B64](http://placehold.it/150x40/6E6B64/FFFFFF?text=6E6B64)
+![#A49D94](http://placehold.it/150x40/A49D94/FFFFFF?text=A49D94)
+![#F1DFCF](http://placehold.it/150x40/F1DFCF/FFFFFF?text=F1DFCF)
 
 This is a case study for:
 1. Android's [Jetpack](https://developer.android.com/jetpack?gclid=CjwKCAjw7--KBhAMEiwAxfpkWBXrXwunvBWDAlvA7MEPjgEx7sdOEpR1-wYX-JShxNisk70XTgJNxhoCSyYQAvD_BwE&gclsrc=aw.ds) libraries
