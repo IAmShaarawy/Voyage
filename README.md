@@ -1,23 +1,14 @@
 # Voyage
 ![Cover](./designs/voyage_cover.png)
-<div id="content">
-    <img src="./designs/voyage_logo.png" width="45%"/>
-    <img src="./designs/voyage_logo_dark.png" width="45%"/> 
-</div>
-<div id="content">
-    <img src="./designs/voyage_logo_trans.png" width="45%"/>
-    <img src="./designs/voyage_logo_trans_dark.png" width="45%"/> 
-</div>
 
-   
-
-### Colors:
+## Colors
 ![#2D3655](http://placehold.it/150x40/2D3655/FFFFFF?text=2D3655)
 ![#424A66](http://placehold.it/150x40/424A66/FFFFFF?text=424A66)
 ![#6E6B64](http://placehold.it/150x40/6E6B64/FFFFFF?text=6E6B64)
 ![#A49D94](http://placehold.it/150x40/A49D94/FFFFFF?text=A49D94)
 ![#F1DFCF](http://placehold.it/150x40/F1DFCF/FFFFFF?text=F1DFCF)
 
+## Brief
 This is a case study for:
 1. Android's [Jetpack](https://developer.android.com/jetpack?gclid=CjwKCAjw7--KBhAMEiwAxfpkWBXrXwunvBWDAlvA7MEPjgEx7sdOEpR1-wYX-JShxNisk70XTgJNxhoCSyYQAvD_BwE&gclsrc=aw.ds) libraries
     1. Compose
