@@ -32,15 +32,19 @@ This is a case study for:
     2. [Truth](https://truth.dev/)
 
 It uses the [Space Flight News Api](https://www.spaceflightnewsapi.net/)
-<style>
-p1 { color: #2D3655 }
-p2 { color: #424A66 }
-s1 { color: #6E6B64 }
-s2 {color: #A49D94}
-accent {color: #F1DFCF}
-#content {
-    display: flex;
-    flex-wrap: wrap;
-}
-</style>
 
+License
+=======
+    Copyright (C) 2021 Mohamed Elshaarawy
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
