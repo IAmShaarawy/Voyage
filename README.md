@@ -1,6 +1,7 @@
 # Voyage
-[![CircleCI](https://circleci.com/gh/Mohamed-Elshaarawy/Voyage/tree/master.svg?style=shield )](https://circleci.com/gh/Mohamed-Elshaarawy/Voyage/tree/master)
+[![CircleCI](https://circleci.com/gh/Mohamed-Elshaarawy/Voyage/tree/master.svg?style=shield )](https://circleci.com/gh/Mohamed-Elshaarawy/Voyage/tree/main)
 ![GitHub](https://img.shields.io/github/license/Mohamed-Elshaarawy/Voyage)
+
 ![Cover](./designs/voyage_cover.png)
 
 ## Colors
