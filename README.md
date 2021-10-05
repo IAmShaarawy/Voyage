@@ -1,5 +1,5 @@
 # Voyage
-![Cover](./\designs/voyage_cover.png)
+![Cover](./designs/voyage_cover.png)
 <div id="content">
     <img src="./designs/voyage_logo.png" width="25%"/>
     <img src="./designs/voyage_logo_trans_dark.png" width="25%"/> 
