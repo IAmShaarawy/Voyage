@@ -45,5 +45,6 @@ class TestChannels {
             }
 
         }
+        assert(false)
     }
 }
