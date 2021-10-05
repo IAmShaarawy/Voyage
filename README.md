@@ -1,18 +1,10 @@
 # Voyage
 ![Cover](./designs/voyage_cover.png)
 <div id="content">
-    <div class="image">
-    <img src="./designs/voyage_logo.png" />
-    </div>
-    <div class="image">
-    <img src="./designs/voyage_logo_trans_dark.png" /> 
-    </div>
-    <div class="image">
-    <img src="./designs/voyage_logo_dark.png" /> 
-    </div>
-    <div class="image">
-    <img src="./designs/voyage_logo_trans.png"/>
-    </div>
+    <img src="./designs/voyage_logo.png" width="25%"/>
+    <img src="./designs/voyage_logo_trans_dark.png" width="25%"/> 
+    <img src="./designs/voyage_logo_dark.png" width="25%"/> 
+    <img src="./designs/voyage_logo_trans.png" width="25%"/>
 </div>
 
 ### Colors: <p1>■</p1> #2D3655 <p2>■</p2> #424A66 <s1>■</s1> #6E6B64 <s2>■</s2> #A49D94 <accent>■</accent> #F1DFCF
@@ -48,12 +40,7 @@ s2 {color: #A49D94}
 accent {color: #F1DFCF}
 #content {
     display: flex;
-    flex-flow: row wrap;
-    align-content: flex-start;
-    border: 1px solid black;
-}
-.image {
-  flex: 0 0 25%;
+    flex-wrap: wrap;
 }
 </style>
 
