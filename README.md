@@ -1,12 +1,12 @@
 # Voyage
 ![Cover](./designs/voyage_cover.png)
 <div id="content">
-    <img src="./designs/voyage_logo.png" width="50%"/>
-    <img src="./designs/voyage_logo_dark.png" width="50%"/> 
+    <img src="./designs/voyage_logo.png" width="45%"/>
+    <img src="./designs/voyage_logo_dark.png" width="45%"/> 
 </div>
 <div id="content">
-    <img src="./designs/voyage_logo_trans.png" width="50%"/>
-    <img src="./designs/voyage_logo_trans_dark.png" width="50%"/> 
+    <img src="./designs/voyage_logo_trans.png" width="45%"/>
+    <img src="./designs/voyage_logo_trans_dark.png" width="45%"/> 
 </div>
 
    
