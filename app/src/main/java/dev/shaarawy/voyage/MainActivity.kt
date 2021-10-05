@@ -15,10 +15,13 @@ import androidx.compose.ui.tooling.preview.Preview
 import dev.shaarawy.voyage.ui.theme.VoyageTheme
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.MainScope
+import logcat.LogPriority
+import logcat.logcat
 
 class MainActivity : ComponentActivity(), CoroutineScope by MainScope() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        logcat(LogPriority.ERROR) { "First log" }
         setContent {
             VoyageTheme {
                 // A surface container using the 'background' color from the theme
