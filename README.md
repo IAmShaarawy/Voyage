@@ -12,7 +12,7 @@
    
 
 ### Colors:
-![■](https://placehold.it/15/2D3655/000000?text=+)
+![lol](http://placehold.it/150x40/2D3655/FFFFFF?text=2D3655)
  <p1>■</p1> #2D3655 <p2>■</p2> #424A66 <s1>■</s1> #6E6B64 <s2>■</s2> #A49D94 <accent>■</accent> #F1DFCF
 
 This is a case study for:
