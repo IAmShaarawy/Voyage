@@ -1,19 +1,14 @@
 # Voyage
 ![Cover](./designs/voyage_cover.png)
-<div id="content">
-    <img src="./designs/voyage_logo.png" width="45%"/>
-    <img src="./designs/voyage_logo_dark.png" width="45%"/> 
-</div>
-<div id="content">
-    <img src="./designs/voyage_logo_trans.png" width="45%"/>
-    <img src="./designs/voyage_logo_trans_dark.png" width="45%"/> 
-</div>
 
-   
+## Colors
+![#2D3655](http://placehold.it/150x40/2D3655/FFFFFF?text=2D3655)
+![#424A66](http://placehold.it/150x40/424A66/FFFFFF?text=424A66)
+![#6E6B64](http://placehold.it/150x40/6E6B64/FFFFFF?text=6E6B64)
+![#A49D94](http://placehold.it/150x40/A49D94/FFFFFF?text=A49D94)
+![#F1DFCF](http://placehold.it/150x40/F1DFCF/FFFFFF?text=F1DFCF)
 
-### Colors:
- <p1>■</p1> #2D3655 <p2>■</p2> #424A66 <s1>■</s1> #6E6B64 <s2>■</s2> #A49D94 <accent>■</accent> #F1DFCF
-
+## Brief
 This is a case study for:
 1. Android's [Jetpack](https://developer.android.com/jetpack?gclid=CjwKCAjw7--KBhAMEiwAxfpkWBXrXwunvBWDAlvA7MEPjgEx7sdOEpR1-wYX-JShxNisk70XTgJNxhoCSyYQAvD_BwE&gclsrc=aw.ds) libraries
     1. Compose
@@ -37,15 +32,19 @@ This is a case study for:
     2. [Truth](https://truth.dev/)
 
 It uses the [Space Flight News Api](https://www.spaceflightnewsapi.net/)
-<style>
-p1 { color: #2D3655 }
-p2 { color: #424A66 }
-s1 { color: #6E6B64 }
-s2 {color: #A49D94}
-accent {color: #F1DFCF}
-#content {
-    display: flex;
-    flex-wrap: wrap;
-}
-</style>
 
+License
+=======
+    Copyright (C) 2021 Mohamed Elshaarawy
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
