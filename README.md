@@ -11,7 +11,8 @@
 
    
 
-### Colors: <p1>■</p1> #2D3655 <p2>■</p2> #424A66 <s1>■</s1> #6E6B64 <s2>■</s2> #A49D94 <accent>■</accent> #F1DFCF
+### Colors:
+ <p1>■</p1> #2D3655 <p2>■</p2> #424A66 <s1>■</s1> #6E6B64 <s2>■</s2> #A49D94 <accent>■</accent> #F1DFCF
 
 This is a case study for:
 1. Android's [Jetpack](https://developer.android.com/jetpack?gclid=CjwKCAjw7--KBhAMEiwAxfpkWBXrXwunvBWDAlvA7MEPjgEx7sdOEpR1-wYX-JShxNisk70XTgJNxhoCSyYQAvD_BwE&gclsrc=aw.ds) libraries
