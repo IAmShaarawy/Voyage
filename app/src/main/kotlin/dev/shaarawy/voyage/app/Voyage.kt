@@ -1,4 +1,4 @@
-package dev.shaarawy.voyage
+package dev.shaarawy.voyage.app
 
 import android.app.Application
 import logcat.AndroidLogcatLogger
@@ -10,6 +10,5 @@ import logcat.LogPriority
 class Voyage:Application() {
     override fun onCreate() {
         super.onCreate()
-        AndroidLogcatLogger.installOnDebuggableApp(this)
     }
 }

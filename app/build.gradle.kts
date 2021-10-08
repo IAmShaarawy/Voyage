@@ -65,4 +65,5 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-tooling:$composeVersion")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2")
     implementation("com.squareup.logcat:logcat:0.1")
+    implementation("androidx.startup:startup-runtime:1.1.0")
 }
