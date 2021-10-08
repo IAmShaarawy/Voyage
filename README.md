@@ -29,8 +29,9 @@ This is a case study for:
 2. Clean Archtacture
 3. [MVVM](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel)&[MVI](https://proandroiddev.com/android-model-view-intent-with-kotlin-flow-ca5945316ec)  for presentation logic _-yes, we can use more than one pattern-_
 4. Kotlin's Coroutines
-5. [Bazel](https://bazel.build/) build system
-6. Testing
+5. Kotlinx Serialization
+6. [Bazel](https://bazel.build/) build system
+7. Testing
     1. [MockK](https://github.com/mockk/mockk)
     2. [Truth](https://truth.dev/)
 
