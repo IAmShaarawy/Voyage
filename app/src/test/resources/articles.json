@@ -1,0 +1,67 @@
+[
+  {
+    "id": 11099,
+    "title": "Boeing and NASA continue to investigate Starliner valve problem",
+    "url": "https://spacenews.com/boeing-and-nasa-continue-to-investigate-starliner-valve-problem/",
+    "imageUrl": "https://spacenews.com/wp-content/uploads/2021/06/starliner-oft2-preps.jpg",
+    "newsSite": "SpaceNews",
+    "summary": "NASA and Boeing are targeting the first half of 2022 to launch the rescheduled test flight of the CST-100 Starliner commercial crew vehicle as engineers continue to investigate a valve problem that postponed the mission two months ago.",
+    "publishedAt": "2021-10-09T21:39:11.000Z",
+    "updatedAt": "2021-10-09T21:39:12.061Z",
+    "featured": false,
+    "launches": [],
+    "events": []
+  },
+  {
+    "id": 11098,
+    "title": "As Martian spacecraft experience solar conjunction, Perseverance confirms Jezero Crater’s watery past",
+    "url": "https://www.nasaspaceflight.com/2021/10/solar-conjunction-percy-science/",
+    "imageUrl": "https://www.nasaspaceflight.com/wp-content/uploads/2021/10/26253_PIA24836-Perseverance-Selfie-at-Rochette-Horizontal-V2-web.jpg",
+    "newsSite": "NASA Spaceflight",
+    "summary": "On October 2, 2021, all actively operating spacecraft at Mars ceased major communication with Earth as the planet entered its solar conjunction — an event wherein Mars crosses behind the Sun, limiting communication with Earth.",
+    "publishedAt": "2021-10-09T20:38:42.000Z",
+    "updatedAt": "2021-10-09T20:39:14.273Z",
+    "featured": false,
+    "launches": [],
+    "events": []
+  },
+  {
+    "id": 11096,
+    "title": "NRO establishes licenses and cybersecurity rules for commercial imagery providers",
+    "url": "https://spacenews.com/nro-commercial-licensing-cybersecurity/",
+    "imageUrl": "https://spacenews.com/wp-content/uploads/2021/10/IMG_8008-scaled.jpg",
+    "newsSite": "SpaceNews",
+    "summary": "The National Reconnaissance Office roadmap for bringing commercial satellite imagery into its hybrid space architecture emphasizes cybersecurity and licenses that enable the agency to share data with partners inside and outside the U.S. government.",
+    "publishedAt": "2021-10-08T22:29:13.000Z",
+    "updatedAt": "2021-10-08T22:29:13.921Z",
+    "featured": false,
+    "launches": [],
+    "events": []
+  },
+  {
+    "id": 11095,
+    "title": "NASA Invites Media to James Webb Space Telescope Launch",
+    "url": "http://www.nasa.gov/press-release/nasa-invites-media-to-james-webb-space-telescope-launch",
+    "imageUrl": "https://www.nasa.gov/sites/default/files/thumbnails/image/webb_for_release.jpg?itok=jbN4Xgfo",
+    "newsSite": "NASA",
+    "summary": "Members of the media may now register their interest in attending the launch of NASA’s James Webb Space Telescope, the premier space science observatory for the next decade.",
+    "publishedAt": "2021-10-08T19:19:00.000Z",
+    "updatedAt": "2021-10-08T19:19:25.521Z",
+    "featured": false,
+    "launches": [],
+    "events": []
+  },
+  {
+    "id": 11094,
+    "title": "Report offers way to ease Mars mission planetary protection requirements",
+    "url": "https://spacenews.com/report-offers-way-to-ease-mars-mission-planetary-protection-requirements/",
+    "imageUrl": "https://spacenews.com/wp-content/uploads/2021/10/percy-pp.jpg",
+    "newsSite": "SpaceNews",
+    "summary": "Future Mars lander missions could adopt less stringent planetary protection requirements by landing in regions of the planet unlikely to allow any terrestrial contamination to propagate, a study concludes.",
+    "publishedAt": "2021-10-08T18:59:13.000Z",
+    "updatedAt": "2021-10-08T18:59:13.421Z",
+    "featured": false,
+    "launches": [],
+    "events": []
+  }
+]
