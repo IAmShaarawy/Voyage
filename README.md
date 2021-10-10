@@ -7,7 +7,7 @@
 ## Colors
 | #2D3655 | #424A66 | #6E6B64 | #A49D94 | #F1DFCF |
 | --- | --- | --- | --- | --- |
-| ![#2D3655](http://placehold.it/150x40/2D3655/FFFFFF?text=2D3655) | ![#424A66](http://placehold.it/150x40/424A66/FFFFFF?text=424A66)|![#6E6B64](http://placehold.it/150x40/6E6B64/FFFFFF?text=6E6B64)|![#A49D94](http://placehold.it/150x40/A49D94/FFFFFF?text=A49D94)|![#F1DFCF](http://placehold.it/150x40/F1DFCF/FFFFFF?text=F1DFCF)
+| ![#2D3655](http://placehold.it/150x40/2D3655/FFFFFF?text=PrimaryDarkVariant) | ![#424A66](http://placehold.it/150x40/424A66/FFFFFF?text=PrimaryDark)|![#6E6B64](http://placehold.it/150x40/6E6B64/FFFFFF?text=PrimaryVariant)|![#A49D94](http://placehold.it/150x40/A49D94/FFFFFF?text=Primary)|![#F1DFCF](http://placehold.it/150x40/F1DFCF/FFFFFF?text=Secondary)
 
 ## Brief
 This is a case study for:
