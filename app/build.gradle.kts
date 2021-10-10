@@ -7,6 +7,7 @@ plugins {
 }
 val composeVersion = extra.get("compose_version") as String
 val hiltVersion = extra.get("hilt_version") as String
+val coroutinesVersion = extra.get("coroutines_version") as String
 
 android {
 
@@ -70,7 +71,8 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")
     androidTestImplementation("androidx.compose.ui:ui-test-junit4:$composeVersion")
     debugImplementation("androidx.compose.ui:ui-tooling:$composeVersion")
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesVersion")
+    testImplementation ("org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutinesVersion")
     implementation("com.squareup.logcat:logcat:0.1")
     implementation("androidx.startup:startup-runtime:1.1.0")
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.0")

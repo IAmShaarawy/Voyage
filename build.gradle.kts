@@ -4,6 +4,7 @@ buildscript {
         extra.apply {
             set("compose_version", "1.0.3")
             set("hilt_version", "2.38.1")
+            set("coroutines_version", "1.5.2")
         }
     }
 

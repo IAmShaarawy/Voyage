@@ -1,13 +1,11 @@
 package dev.shaarawy.voyage.data.entities
 
-import org.junit.Assert.*
-import org.junit.Before
+import com.google.common.truth.Truth.assertThat
+import dev.shaarawy.voyage.readJSONFile
+import kotlinx.coroutines.runBlocking
+import org.junit.Assert.assertEquals
+import org.junit.Assert.assertNotEquals
 import org.junit.Test
-import java.io.File
-import android.R.attr.resource
-import kotlinx.serialization.decodeFromString
-import kotlinx.serialization.json.Json
-import com.google.common.truth.Truth.*
 
 
 /**
@@ -16,25 +14,19 @@ import com.google.common.truth.Truth.*
 class ArticleTest {
 
     @Test
-    fun `test serialization`() {
-        val article = readSerializedJsonString("article.json")
+    fun `test serialization`() = runBlocking {
+        val article = readJSONFile<Article>("article.json")
         assertNotEquals(article.id, -1)
         assertThat(article.events).isNotEmpty()
         assertThat(article.launches).isNotEmpty()
     }
 
     @Test
-    fun `test serialization no id, events, launches, nor featured`() {
-        val article = readSerializedJsonString("article1.json")
+    fun `test serialization no id, events, launches, nor featured`() = runBlocking {
+        val article = readJSONFile<Article>("article1.json")
         assertEquals(article.id, -1)
         assertThat(article.featured).isFalse()
         assertThat(article.events).isEmpty()
         assertThat(article.launches).isEmpty()
-    }
-
-    private fun readSerializedJsonString(fileName: String): Article {
-        val classLoader = javaClass.classLoader!!
-        val jsonString = File(classLoader.getResource(fileName).file).readText()
-        return Json.decodeFromString<Article>(jsonString)
     }
 }

@@ -3,7 +3,6 @@ package dev.shaarawy.voyage.data.repositories
 import dev.shaarawy.voyage.data.entities.Article
 import dev.shaarawy.voyage.data.services.ArticlesService
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.withContext
 import retrofit2.HttpException
 import javax.inject.Inject
