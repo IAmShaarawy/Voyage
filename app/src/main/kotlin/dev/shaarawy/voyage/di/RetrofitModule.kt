@@ -5,7 +5,6 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
-import dev.shaarawy.voyage.data.services.ArticlesService
 import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.json.Json
 import logcat.LogPriority
@@ -21,8 +20,7 @@ import javax.inject.Singleton
  */
 @Module
 @InstallIn(SingletonComponent::class)
-class NetworkModule {
-
+class RetrofitModule {
     @Singleton
     @Provides
     fun provideOkHttpClient(): OkHttpClient = OkHttpClient.Builder()
@@ -39,8 +37,4 @@ class NetworkModule {
         .baseUrl("https://api.spaceflightnewsapi.net/v3/")
         .addConverterFactory(Json.asConverterFactory("application/json".toMediaType()))
         .build()
-
-    @Provides
-    fun provideArticleService(retrofit: Retrofit): ArticlesService =
-        retrofit.create(ArticlesService::class.java)
 }

@@ -14,6 +14,7 @@ import retrofit2.Retrofit
  * @author Mohamed Elshaarawy on Oct 10, 2021.
  */
 @ExperimentalSerializationApi
+@Deprecated("relay on the injected MockWebServer from hilt")
 class RetrofitRule(
     private val port: Int = 0,
     private val baseUrl: String = "/",
