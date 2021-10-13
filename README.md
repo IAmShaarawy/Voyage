@@ -24,7 +24,7 @@ This is a case study for:
     10. Window Manager _for foldables devices_
     11. Benchmark
 
-2. Clean Archtacture
+2. Clean Architecture
 3. [MVVM](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel)&[MVI](https://proandroiddev.com/android-model-view-intent-with-kotlin-flow-ca5945316ec)  for presentation logic _-yes, we can use more than one pattern-_
 4. Kotlin's Coroutines
 5. Kotlinx Serialization

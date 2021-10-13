@@ -11,12 +11,12 @@ val coroutinesVersion = extra.get("coroutines_version") as String
 
 android {
 
-    compileSdk = 30
+    compileSdk = 31
 
     defaultConfig {
         applicationId = "dev.shaarawy.voyage"
         minSdk = 26
-        targetSdk = 30
+        targetSdk = 31
         versionCode = 1
         versionName = "1.0"
 
