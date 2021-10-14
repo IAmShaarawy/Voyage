@@ -10,22 +10,7 @@ val hiltVersion = extra.get("hilt_version") as String
 val coroutinesVersion = extra.get("coroutines_version") as String
 
 android {
-    signingConfigs {
-        create("release") {
-            storeFile = file("../voyage.keystore.jks")
-            storePassword = "voyage"
-            keyAlias = "release"
-            keyPassword = "voyage"
-        }
-        getByName("debug") {
-            storeFile = file("../voyage.keystore.jks")
-            storePassword = "voyage"
-            keyAlias = "debug"
-            keyPassword = "voyage"
-        }
-    }
     compileSdk = 31
-
     defaultConfig {
         applicationId = "dev.shaarawy.voyage"
         minSdk = 26
@@ -42,6 +27,21 @@ android {
     testOptions {
         unitTests {
             isIncludeAndroidResources = true
+        }
+    }
+
+    signingConfigs {
+        create("release") {
+            storeFile = file("../voyage.keystore.jks")
+            storePassword = "voyage"
+            keyAlias = "release"
+            keyPassword = "voyage"
+        }
+        getByName("debug") {
+            storeFile = file("../voyage.keystore.jks")
+            storePassword = "voyage"
+            keyAlias = "debug"
+            keyPassword = "voyage"
         }
     }
 
