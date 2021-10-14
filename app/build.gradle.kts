@@ -10,7 +10,20 @@ val hiltVersion = extra.get("hilt_version") as String
 val coroutinesVersion = extra.get("coroutines_version") as String
 
 android {
-
+    signingConfigs {
+        create("release") {
+            storeFile = file("../voyage.keystore.jks")
+            storePassword = "voyage"
+            keyAlias = "release"
+            keyPassword = "voyage"
+        }
+        getByName("debug") {
+            storeFile = file("../voyage.keystore.jks")
+            storePassword = "voyage"
+            keyAlias = "debug"
+            keyPassword = "voyage"
+        }
+    }
     compileSdk = 31
 
     defaultConfig {
@@ -19,11 +32,11 @@ android {
         targetSdk = 31
         versionCode = 1
         versionName = "1.0"
-
         testInstrumentationRunner = "dev.shaarawy.voyage.HiltApplicationRunner"
         vectorDrawables {
             useSupportLibrary = true
         }
+        signingConfig = signingConfigs.getByName("release")
     }
 
     testOptions {
@@ -36,6 +49,13 @@ android {
         getByName("release") {
             isMinifyEnabled = true
             proguardFiles("proguard-android-optimize.txt", "proguard-rules.pro")
+            signingConfig = signingConfigs.getByName("release")
+        }
+
+        getByName("debug") {
+            applicationIdSuffix = ".debug"
+            versionNameSuffix = "-debug"
+            signingConfig = signingConfigs.getByName("debug")
         }
     }
     compileOptions {
@@ -43,7 +63,7 @@ android {
         targetCompatibility = JavaVersion.VERSION_11
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = JavaVersion.VERSION_11.toString()
     }
     buildFeatures {
         compose = true
