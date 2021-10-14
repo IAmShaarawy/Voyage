@@ -14,14 +14,13 @@ android {
     defaultConfig {
         applicationId = "dev.shaarawy.voyage"
         minSdk = 26
-        targetSdk = 31
+        targetSdk = 30
         versionCode = 1
         versionName = "1.0"
         testInstrumentationRunner = "dev.shaarawy.voyage.HiltApplicationRunner"
         vectorDrawables {
             useSupportLibrary = true
         }
-        signingConfig = signingConfigs.getByName("release")
     }
 
     testOptions {
