@@ -10,20 +10,18 @@ val hiltVersion = extra.get("hilt_version") as String
 val coroutinesVersion = extra.get("coroutines_version") as String
 
 android {
-
-    compileSdk = 30
-
+    compileSdk = 31
     defaultConfig {
         applicationId = "dev.shaarawy.voyage"
         minSdk = 26
-        targetSdk = 30
+        targetSdk = 31
         versionCode = 1
         versionName = "1.0"
-
         testInstrumentationRunner = "dev.shaarawy.voyage.HiltApplicationRunner"
         vectorDrawables {
             useSupportLibrary = true
         }
+        signingConfig = signingConfigs.getByName("release")
     }
 
     testOptions {
@@ -32,18 +30,40 @@ android {
         }
     }
 
+    signingConfigs {
+        create("release") {
+            storeFile = file("../voyage.keystore.jks")
+            storePassword = "voyage"
+            keyAlias = "release"
+            keyPassword = "voyage"
+        }
+        getByName("debug") {
+            storeFile = file("../voyage.keystore.jks")
+            storePassword = "voyage"
+            keyAlias = "debug"
+            keyPassword = "voyage"
+        }
+    }
+
     buildTypes {
         getByName("release") {
             isMinifyEnabled = true
             proguardFiles("proguard-android-optimize.txt", "proguard-rules.pro")
+            signingConfig = signingConfigs.getByName("release")
+        }
+
+        getByName("debug") {
+            applicationIdSuffix = ".debug"
+            versionNameSuffix = "-debug"
+            signingConfig = signingConfigs.getByName("debug")
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = JavaVersion.VERSION_11.toString()
     }
     buildFeatures {
         compose = true
@@ -94,4 +114,5 @@ dependencies {
     androidTestImplementation("com.google.dagger:hilt-android-testing:$hiltVersion")
     kaptAndroidTest("com.google.dagger:hilt-android-compiler:$hiltVersion")
     testImplementation("org.robolectric:robolectric:4.6")
+    implementation("androidx.core:core-splashscreen:1.0.0-alpha02")
 }
