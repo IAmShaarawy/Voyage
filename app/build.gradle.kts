@@ -31,13 +31,14 @@ android {
 
     signingConfigs {
         create("release") {
-            storeFile = file("../voyage.keystore.jks")
-            storePassword = "voyage"
+            val password = obtainKeyStorePassword()
+            storeFile = file("../keystore/release.jks")
+            storePassword = password
             keyAlias = "release"
-            keyPassword = "voyage"
+            keyPassword = password
         }
         getByName("debug") {
-            storeFile = file("../voyage.keystore.jks")
+            storeFile = file("../keystore/debug.jks")
             storePassword = "voyage"
             keyAlias = "debug"
             keyPassword = "voyage"
@@ -114,4 +115,23 @@ dependencies {
     kaptAndroidTest("com.google.dagger:hilt-android-compiler:$hiltVersion")
     testImplementation("org.robolectric:robolectric:4.6")
     implementation("androidx.core:core-splashscreen:1.0.0-alpha02")
+}
+
+fun obtainKeyStorePassword(): String {
+
+    val propertiesFile = file("../passwords.properties")
+    val isCircleCI = hasProperty("CIRCLECI")
+
+    if (propertiesFile.exists()) {
+        return groovy.util.ConfigSlurper().parse(propertiesFile.toURI().toURL()).toProperties()
+            .run {
+                getProperty("KEY_STORE_PASS")
+            }
+    }
+
+    if (isCircleCI) {
+        return System.getProperty("KEY_STORE_PASS")
+    }
+
+    throw GradleException("No signing credentials provided")
 }
