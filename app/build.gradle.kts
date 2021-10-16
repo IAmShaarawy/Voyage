@@ -120,7 +120,7 @@ dependencies {
 fun obtainKeyStorePassword(): String {
 
     val propertiesFile = file("../passwords.properties")
-    val isCircleCI = hasProperty("CIRCLECI")
+    val isCircleCI = System.getenv("CIRCLECI").toBoolean()
 
     if (propertiesFile.exists()) {
         return groovy.util.ConfigSlurper().parse(propertiesFile.toURI().toURL()).toProperties()
@@ -130,7 +130,7 @@ fun obtainKeyStorePassword(): String {
     }
 
     if (isCircleCI) {
-        return System.getProperty("KEY_STORE_PASS")
+        return System.getenv("KEY_STORE_PASS")
     }
 
     throw GradleException("No signing credentials provided")
