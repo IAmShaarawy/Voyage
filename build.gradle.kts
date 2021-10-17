@@ -5,6 +5,7 @@ buildscript {
             set("compose_version", "1.0.3")
             set("hilt_version", "2.38.1")
             set("coroutines_version", "1.5.2")
+            set("paging_version", "3.0.1")
         }
     }
 

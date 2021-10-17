@@ -1,0 +1,87 @@
+[
+  {
+    "id": 11171,
+    "title": "SpaceX rapidly tests, ships Falcon 9 second stage for next NASA astronaut launch",
+    "url": "https://www.teslarati.com/spacex-next-nasa-astronaut-launch-falcon-upper-stage/",
+    "imageUrl": "https://www.teslarati.com/wp-content/uploads/2019/12/Crew-Dragon-Demo-2-animation-Dec-2019-SpaceX-launch-9-edit-c.jpg",
+    "newsSite": "Teslarati",
+    "summary": "SpaceX has shipped, tested, and delivered the new Falcon 9 upper stage tasked with carrying the company’s next Crew Dragon astronauts to...",
+    "publishedAt": "2021-10-15T09:09:32.000Z",
+    "updatedAt": "2021-10-15T09:09:44.867Z",
+    "featured": false,
+    "launches": [
+      {
+        "id": "0d779392-1a36-4c1e-b0b8-ec11e3031ee6",
+        "provider": "Launch Library 2"
+      }
+    ],
+    "events": []
+  },
+  {
+    "id": 11191,
+    "title": "Photos: Atlas 5 rocket stands on the launch pad with NASA’s Lucy spacecraft",
+    "url": "https://spaceflightnow.com/2021/10/15/photos-atlas-5-rocket-stands-on-the-launch-pad-with-nasas-lucy-spacecraft/",
+    "imageUrl": "https://spaceflightnow.com/wp-content/uploads/2021/10/lucy_remote-4.jpg",
+    "newsSite": "Spaceflight Now",
+    "summary": "The final Atlas rocket assigned to launch a solar system exploration mission is set for liftoff before dawn Saturday. NASA’s Lucy asteroid mission is mounted on top of the rocket awaiting launch from Cape Canaveral Space Force Station.",
+    "publishedAt": "2021-10-15T03:19:08.000Z",
+    "updatedAt": "2021-10-16T03:19:08.610Z",
+    "featured": false,
+    "launches": [
+      {
+        "id": "7e2d0fe7-6156-442d-be4e-cbac85f259e5",
+        "provider": "Launch Library 2"
+      }
+    ],
+    "events": []
+  },
+  {
+    "id": 11190,
+    "title": "Lucy asteroid probe to set a new distance record for solar-powered spacecraft",
+    "url": "https://spaceflightnow.com/2021/10/15/lucy-asteroid-probe-to-set-a-new-distance-record-for-solar-power-spacecraft/",
+    "imageUrl": "https://spaceflightnow.com/wp-content/uploads/2021/10/lucy_ultraflex.jpg",
+    "newsSite": "Spaceflight Now",
+    "summary": "About an hour after launch Saturday, NASA’s Lucy spacecraft will start the delicate process of opening its circular, fan-shaped solar arrays — the largest ever on a deep space probe — to power the asteroid explorer’s 12-year journey into the outer solar system. When it reaches the apex of its interplanetary orbital arc, the Lucy mission will become the most distant spacecraft to ever use solar power, breaking the record set by NASA’s Juno spacecraft orbiting Jupiter. Lucy will fly by eight asteroids during its mission, including seven objects in the Trojan swarms that lead and trail Jupiter in its orbit around the sun. The mission is the first to explore the Trojan asteroids, which scientists say are leftover building blocks similar to objects that came together to form the solar systems giant outer planets. To get there, Lucy will rely on a few engineering innovations. “The most obvious feature that we have on Lucy is our gigantic, amazing solar array wings,” said Katie Oakman, structures mechanisms lead for the Lucy mission at Lockheed Martin,",
+    "publishedAt": "2021-10-15T02:19:08.000Z",
+    "updatedAt": "2021-10-16T02:19:08.467Z",
+    "featured": false,
+    "launches": [
+      {
+        "id": "7e2d0fe7-6156-442d-be4e-cbac85f259e5",
+        "provider": "Launch Library 2"
+      }
+    ],
+    "events": []
+  },
+  {
+    "id": 11167,
+    "title": "Kendall looks to accelerate appointment of civilian leader to oversee Space Force acquisitions",
+    "url": "https://spacenews.com/kendall-looks-to-accelerate-appointment-of-civilian-leader-to-oversee-space-force-acquisitions/",
+    "imageUrl": "https://spacenews.com/wp-content/uploads/2021/10/210728-F-LE393-9200.jpg",
+    "newsSite": "SpaceNews",
+    "summary": "Air Force Secretary Frank Kendall is asking Congress to authorize a new assistant secretary for space acquisitions before the Oct. 1, 2022, date that was set in the 2020 National Defense Authorization Act.",
+    "publishedAt": "2021-10-14T23:49:15.000Z",
+    "updatedAt": "2021-10-14T23:49:15.557Z",
+    "featured": false,
+    "launches": [],
+    "events": []
+  },
+  {
+    "id": 11166,
+    "title": "China launches hydrogen-alpha solar telescope aboard Long March 2D",
+    "url": "https://www.nasaspaceflight.com/2021/10/hydrogen-alpha-solar-telescope/",
+    "imageUrl": "https://www.nasaspaceflight.com/wp-content/uploads/2021/10/cz2d-chase-launch.jpg",
+    "newsSite": "NASA Spaceflight",
+    "summary": "China has launched a small experimental solar observatory as part of a multi-satellite launch aboard a Long March 2D rocket Thursday. The launch took place from the Taiyuan Satellite Launch Center at 10:51 UTC (18:51 Bejing time).",
+    "publishedAt": "2021-10-14T23:34:13.000Z",
+    "updatedAt": "2021-10-14T23:39:16.583Z",
+    "featured": false,
+    "launches": [
+      {
+        "id": "00190507-4918-491a-aa73-0e151775fada",
+        "provider": "Launch Library 2"
+      }
+    ],
+    "events": []
+  }
+]
