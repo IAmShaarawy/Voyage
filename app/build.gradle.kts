@@ -119,7 +119,6 @@ dependencies {
     implementation("androidx.paging:paging-runtime:$pagingVersion")
     testImplementation("androidx.paging:paging-common:$pagingVersion")
     implementation("androidx.paging:paging-compose:1.0.0-alpha14")
-    testImplementation("io.mockk:mockk:1.12.0")
 }
 
 fun obtainKeyStorePassword(): String {
