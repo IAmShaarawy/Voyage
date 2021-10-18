@@ -47,14 +47,14 @@ class ArticlesRepositoryImplTest {
     @Test
     fun `retrieve data`() = runBlocking {
         val r = MockResponse()
-        r.setBody(readTextFile("articles.json"))
+        r.setBody(readTextFile("articles/articles.json"))
         server.enqueue(r)
         assertThat(repo.getArticles(5)).hasSize(5)
     }
 
     @Test
     fun `article by id`() = runBlocking {
-        val r200 = MockResponse().apply { setBody(readTextFile("article.json")) }
+        val r200 = MockResponse().apply { setBody(readTextFile("articles/article.json")) }
         server.enqueue(r200)
         assertThat(repo.getArticleById(1)).isNotNull()
     }

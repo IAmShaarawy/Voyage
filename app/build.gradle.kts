@@ -8,6 +8,7 @@ plugins {
 val composeVersion = extra.get("compose_version") as String
 val hiltVersion = extra.get("hilt_version") as String
 val coroutinesVersion = extra.get("coroutines_version") as String
+val pagingVersion = extra.get("paging_version") as String
 
 android {
     compileSdk = 31
@@ -115,6 +116,9 @@ dependencies {
     kaptAndroidTest("com.google.dagger:hilt-android-compiler:$hiltVersion")
     testImplementation("org.robolectric:robolectric:4.6")
     implementation("androidx.core:core-splashscreen:1.0.0-alpha02")
+    implementation("androidx.paging:paging-runtime:$pagingVersion")
+    testImplementation("androidx.paging:paging-common:$pagingVersion")
+    implementation("androidx.paging:paging-compose:1.0.0-alpha14")
 }
 
 fun obtainKeyStorePassword(): String {

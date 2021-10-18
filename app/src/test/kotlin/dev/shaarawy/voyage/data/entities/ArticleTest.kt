@@ -15,7 +15,7 @@ class ArticleTest {
 
     @Test
     fun `test serialization`() = runBlocking {
-        val article = readJSONFile<Article>("article.json")
+        val article = readJSONFile<Article>("articles/article.json")
         assertNotEquals(article.id, -1)
         assertThat(article.events).isNotEmpty()
         assertThat(article.launches).isNotEmpty()
@@ -23,7 +23,7 @@ class ArticleTest {
 
     @Test
     fun `test serialization no id, events, launches, nor featured`() = runBlocking {
-        val article = readJSONFile<Article>("article1.json")
+        val article = readJSONFile<Article>("articles/article1.json")
         assertEquals(article.id, -1)
         assertThat(article.featured).isFalse()
         assertThat(article.events).isEmpty()
