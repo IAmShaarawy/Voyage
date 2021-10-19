@@ -1,8 +1,13 @@
 package dev.shaarawy.voyage.data.repositories
 
+import androidx.paging.Pager
+import androidx.paging.PagingConfig
+import androidx.paging.PagingData
 import dev.shaarawy.voyage.data.entities.Article
+import dev.shaarawy.voyage.data.pagingSources.ArticlesPagingSource
 import dev.shaarawy.voyage.data.services.ArticlesService
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.withContext
 import retrofit2.HttpException
 import javax.inject.Inject
@@ -16,6 +21,7 @@ interface ArticlesRepository {
     suspend fun getArticlesByLaunchId(launchId: String): List<Article>
     suspend fun getArticlesByEventId(eventId: Int): List<Article>
     suspend fun getArticleById(id: Int): Article?
+    fun getArticlesPager(): Flow<PagingData<Article>>
 }
 
 class ArticlesRepositoryImpl @Inject constructor(
@@ -52,4 +58,8 @@ class ArticlesRepositoryImpl @Inject constructor(
             else throw error
         }
     }
+
+    override fun getArticlesPager(): Flow<PagingData<Article>> =
+        Pager(config = PagingConfig(pageSize = 10)) { ArticlesPagingSource(this) }.flow
+
 }

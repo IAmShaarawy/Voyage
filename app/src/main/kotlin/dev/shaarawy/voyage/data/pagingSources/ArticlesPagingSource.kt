@@ -4,12 +4,11 @@ import androidx.paging.PagingSource
 import androidx.paging.PagingState
 import dev.shaarawy.voyage.data.entities.Article
 import dev.shaarawy.voyage.data.repositories.ArticlesRepository
-import javax.inject.Inject
 
 /**
  * @author Mohamed Elshaarawy on Oct 17, 2021.
  */
-class ArticlesPagingSource @Inject constructor(
+class ArticlesPagingSource(
     private val articlesRepository: ArticlesRepository
 ) : PagingSource<Int, Article>() {
     override fun getRefreshKey(state: PagingState<Int, Article>): Int? {
