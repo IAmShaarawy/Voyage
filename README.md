@@ -22,7 +22,6 @@ This is a case study for:
     8. Constraint Layout
     9. Startup
     10. Window Manager _for foldables devices_
-    11. Benchmark
 
 2. Clean Architecture
 3. [MVVM](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel)&[MVI](https://proandroiddev.com/android-model-view-intent-with-kotlin-flow-ca5945316ec)  for presentation logic _-yes, we can use more than one pattern-_
@@ -32,6 +31,8 @@ This is a case study for:
 7. Testing
     1. [MockK](https://github.com/mockk/mockk)
     2. [Truth](https://truth.dev/)
+    3. [Kover](https://github.com/Kotlin/kotlinx-kover) for code coverage
+    4. [Benchmark](https://developer.android.com/studio/profile/benchmarking-overview) to test the performance of the app
 
 It uses the [Space Flight News Api](https://www.spaceflightnewsapi.net/)
 
