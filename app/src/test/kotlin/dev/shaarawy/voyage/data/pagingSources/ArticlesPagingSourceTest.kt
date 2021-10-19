@@ -8,6 +8,7 @@ import com.google.common.truth.Truth.assertThat
 import dagger.hilt.android.testing.HiltAndroidRule
 import dagger.hilt.android.testing.HiltAndroidTest
 import dev.shaarawy.voyage.data.entities.Article
+import dev.shaarawy.voyage.data.repositories.ArticlesRepository
 import dev.shaarawy.voyage.readJSONFile
 import dev.shaarawy.voyage.readTextFile
 import dev.shaarawy.voyage.rules.MainCoroutineRule
@@ -40,7 +41,7 @@ class ArticlesPagingSourceTest {
 
 
     @Inject
-    lateinit var pageSource: ArticlesPagingSource
+    lateinit var articlesRepository: ArticlesRepository
 
     @Inject
     lateinit var server: MockWebServer
@@ -54,7 +55,7 @@ class ArticlesPagingSourceTest {
     fun `test page1`() = runBlocking {
         server.enqueue(MockResponse().apply { setBody(readTextFile("articles/pagination/page1.json")) })
         assertThat(
-            pageSource.load(
+            ArticlesPagingSource(articlesRepository).load(
                 Refresh(
                     key = 0,
                     loadSize = 10,
@@ -74,7 +75,7 @@ class ArticlesPagingSourceTest {
     fun `test page2`() = runBlocking {
         server.enqueue(MockResponse().apply { setBody(readTextFile("articles/pagination/page2.json")) })
         assertThat(
-            pageSource.load(
+            ArticlesPagingSource(articlesRepository).load(
                 Refresh(
                     key = 10,
                     loadSize = 10,
@@ -94,7 +95,7 @@ class ArticlesPagingSourceTest {
     fun `test page3`() = runBlocking {
         server.enqueue(MockResponse().apply { setBody(readTextFile("articles/pagination/page3.json")) })
         assertThat(
-            pageSource.load(
+            ArticlesPagingSource(articlesRepository).load(
                 Refresh(
                     key = 20,
                     loadSize = 10,
@@ -113,7 +114,7 @@ class ArticlesPagingSourceTest {
     @Test
     fun `test error`() = runBlocking {
         server.enqueue(MockResponse().apply { setResponseCode(500) })
-        val actual = pageSource.load(
+        val actual = ArticlesPagingSource(articlesRepository).load(
             Refresh(
                 key = 20,
                 loadSize = 10,
@@ -144,6 +145,7 @@ class ArticlesPagingSourceTest {
                 nextKey = null
             )
         )
+        val pageSource = ArticlesPagingSource(articlesRepository)
         val state1 = PagingState(pages, null, PagingConfig(10), 5)
         assertThat(pageSource.getRefreshKey(state = state1)).isNull()
         val state2 = PagingState(pages, 5, PagingConfig(10), 5)

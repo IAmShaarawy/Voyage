@@ -4,6 +4,7 @@ import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.paging.PagingData
 import dev.shaarawy.voyage.data.entities.Article
+import dev.shaarawy.voyage.data.entities.SortingSpecifier
 import dev.shaarawy.voyage.data.pagingSources.ArticlesPagingSource
 import dev.shaarawy.voyage.data.services.ArticlesService
 import kotlinx.coroutines.Dispatchers
@@ -17,11 +18,16 @@ import javax.inject.Inject
  */
 interface ArticlesRepository {
     suspend fun getArticlesCount(): Int
-    suspend fun getArticles(limit: Int, startFrom: Int? = null): List<Article>
+    suspend fun getArticles(
+        limit: Int,
+        startFrom: Int? = null,
+        sortingSpecifier: SortingSpecifier? = null
+    ): List<Article>
+
     suspend fun getArticlesByLaunchId(launchId: String): List<Article>
     suspend fun getArticlesByEventId(eventId: Int): List<Article>
     suspend fun getArticleById(id: Int): Article?
-    fun getArticlesPager(): Flow<PagingData<Article>>
+    fun getArticlesPager(sortingSpecifier: SortingSpecifier? = null): Flow<PagingData<Article>>
 }
 
 class ArticlesRepositoryImpl @Inject constructor(
@@ -32,11 +38,17 @@ class ArticlesRepositoryImpl @Inject constructor(
         service.getCount().toInt()
     }
 
-    override suspend fun getArticles(limit: Int, startFrom: Int?) = withContext(Dispatchers.IO) {
+    override suspend fun getArticles(
+        limit: Int,
+        startFrom: Int?,
+        sortingSpecifier: SortingSpecifier?
+    ) = withContext(Dispatchers.IO) {
         val queryParameter = mutableMapOf<String, String>().apply {
             put("_limit", limit.toString())
             if (startFrom != null)
                 put("_start", startFrom.toString())
+            if (sortingSpecifier != null)
+                put("_sort", sortingSpecifier.value)
         }
         service.getArticles(parameters = queryParameter)
     }
@@ -59,7 +71,12 @@ class ArticlesRepositoryImpl @Inject constructor(
         }
     }
 
-    override fun getArticlesPager(): Flow<PagingData<Article>> =
-        Pager(config = PagingConfig(pageSize = 10)) { ArticlesPagingSource(this) }.flow
+    override fun getArticlesPager(sortingSpecifier: SortingSpecifier?): Flow<PagingData<Article>> =
+        Pager(config = PagingConfig(pageSize = 10)) {
+            ArticlesPagingSource(
+                articlesRepository = this,
+                sortingSpecifier = sortingSpecifier
+            )
+        }.flow
 
 }

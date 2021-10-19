@@ -6,6 +6,7 @@ import dagger.hilt.android.testing.HiltAndroidTest
 import dev.shaarawy.voyage.readTextFile
 import dev.shaarawy.voyage.rules.MainCoroutineRule
 import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.flow.firstOrNull
 import kotlinx.coroutines.runBlocking
 import kotlinx.serialization.ExperimentalSerializationApi
 import okhttp3.mockwebserver.MockResponse
@@ -72,5 +73,15 @@ class ArticlesRepositoryImplTest {
         server.enqueue(r500)
         val result = runCatching { repo.getArticleById(-1) }
         assertThat(result.exceptionOrNull()).isNotNull()
+    }
+
+    @Test
+    fun `test getArticlesPager`() = runBlocking {
+        MockResponse().apply {
+            setBody(readTextFile("articles/articles.json"))
+        }.also {
+            server.enqueue(it)
+        }
+        assertThat(repo.getArticlesPager().firstOrNull()).isNotNull()
     }
 }
