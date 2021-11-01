@@ -19,6 +19,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import dagger.hilt.android.AndroidEntryPoint
+import dev.shaarawy.voyage.ui.articles.ArticlesScreen
 import dev.shaarawy.voyage.ui.theme.VoyageTheme
 
 @AndroidEntryPoint
@@ -30,7 +31,7 @@ class MainActivity : ComponentActivity() {
             setContent {
                 VoyageTheme {
                     Surface(color = MaterialTheme.colors.background) {
-                        Logo()
+                        ArticlesScreen()
                     }
                 }
             }

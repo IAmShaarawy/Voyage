@@ -3,9 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="dev.shaarawy.voyage">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name=".app.Voyage"
         android:allowBackup="true"
+        android:usesCleartextTraffic="true"
         android:fullBackupContent="@xml/backup_descriptor"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"

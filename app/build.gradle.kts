@@ -119,6 +119,9 @@ dependencies {
     implementation("androidx.paging:paging-runtime:$pagingVersion")
     testImplementation("androidx.paging:paging-common:$pagingVersion")
     implementation("androidx.paging:paging-compose:1.0.0-alpha14")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.4.0-rc01")
+    implementation("io.coil-kt:coil-compose:1.4.0")
+    implementation("com.google.accompanist:accompanist-swiperefresh:0.20.0")
 }
 
 fun obtainKeyStorePassword(): String {
