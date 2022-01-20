@@ -21,10 +21,9 @@ import dev.shaarawy.voyage.ui.articles.item.ArticleItem
 fun ArticlesScreen() {
     val articlesViewModel: ArticlesViewModel = viewModel()
     val lazyPagingItems = articlesViewModel.articlePagingDataFlow.collectAsLazyPagingItems()
-    Scaffold() {
-
+    Scaffold {
         SwipeRefresh(
-            state = SwipeRefreshState(lazyPagingItems.loadState.refresh is LoadState.Loading||lazyPagingItems.loadState.append is LoadState.Loading),
+            state = SwipeRefreshState(lazyPagingItems.loadState.refresh is LoadState.Loading || lazyPagingItems.loadState.append is LoadState.Loading),
             onRefresh = lazyPagingItems::refresh,
         ) {
             LazyColumn(contentPadding = PaddingValues(8.dp)) {
