@@ -24,9 +24,9 @@ class RetrofitModule {
     @Singleton
     @Provides
     fun provideOkHttpClient(): OkHttpClient = OkHttpClient.Builder()
-        .addInterceptor(HttpLoggingInterceptor(logger = {
-            logcat(LogPriority.ERROR) { it }
-        }))
+        .addInterceptor(HttpLoggingInterceptor(logger = { log ->
+            logcat(LogPriority.ERROR) { log }
+        }).setLevel(HttpLoggingInterceptor.Level.BASIC))
         .build()
 
     @ExperimentalSerializationApi

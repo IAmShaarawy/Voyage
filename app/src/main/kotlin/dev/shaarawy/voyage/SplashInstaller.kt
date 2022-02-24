@@ -8,36 +8,35 @@ import kotlinx.coroutines.CoroutineStart
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import java.time.Duration
 
 /**
  * @author Mohamed Elshaarawy on Oct 14, 2021.
  */
 class SplashInstaller<A : ComponentActivity>(
     private val activity: A,
-    private val delay: Duration = Duration.ofSeconds(2),
     visibilityPredicate: () -> Boolean = { BuildConfig.BUILD_TYPE != "debug" },
-    private val after: A.() -> Unit
+    private val beforeHide: suspend A.() -> Unit = { delay(2000) },
+    private val afterHide: A.() -> Unit
 ) : CoroutineScope by activity.lifecycleScope {
 
     private val isSplashVisibleChannel by lazy { Channel<Boolean>() }
 
     private val isAfterCalled by lazy { Channel<Boolean>(capacity = 1) }
 
-    private val delayJob = launch(start = CoroutineStart.LAZY) {
-        delay(delay.toMillis())
+    private val splashSuspensionJob = launch(start = CoroutineStart.LAZY) {
+        activity.beforeHide()
         isSplashVisibleChannel.send(false)
     }
 
     init {
         if (visibilityPredicate()) {
-            delayJob.start()
+            splashSuspensionJob.start()
             installSplash()
         } else afterSplash()
     }
 
     private fun installSplash() {
-        activity.installSplashScreen().setKeepVisibleCondition {
+        activity.installSplashScreen().setKeepOnScreenCondition {
             val isVisible = isSplashVisibleChannel.tryReceive().getOrNull() ?: true
             if (!isVisible) {
                 afterSplash()
@@ -49,7 +48,7 @@ class SplashInstaller<A : ComponentActivity>(
     private fun afterSplash() {
         if (isAfterCalled.tryReceive().getOrNull() != true) {
             isAfterCalled.trySend(true)
-            activity.after()
+            activity.afterHide()
         }
     }
 }
